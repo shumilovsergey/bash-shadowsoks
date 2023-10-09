@@ -82,15 +82,16 @@ networksetup -setsocksfirewallproxystate $selected_element on
 
 ss-local -c $script_folder/shadowsocks.json &
 
-# Store the process ID of the VPN
+# Сохраняем ID процесса VPN
 vpn_pid=$!
 
-# Wait for user input to stop VPN
+# Ждем команды от пользователя (Энтер)
 echo " "
 read -p "Нажмите Enter чтобы отключить VPN..."
 
-# Stop VPN by killing the process
+# Завершаем процесс по ID
 kill "$vpn_pid" > /dev/null 2>&1
+
 
 networksetup -setsocksfirewallproxystate $selected_element off
 clear
