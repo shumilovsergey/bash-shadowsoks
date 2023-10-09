@@ -93,3 +93,4 @@ networksetup -setsocksfirewallproxystate $selected_element off
 clear
 echo " "
 echo "VPN выключен!"
+
