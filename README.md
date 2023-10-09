@@ -8,5 +8,5 @@
 Для запуска из командной строки:
 
 ```bash
-wget https://raw.githubusercontent.com/shumilovsergey/bash-shadowsoks/main/main.sh && chmod +x main.sh && ./main-setup.sh
+wget https://raw.githubusercontent.com/shumilovsergey/bash-shadowsoks/main/main.sh && chmod +x main.sh && ./main.sh
 ```
