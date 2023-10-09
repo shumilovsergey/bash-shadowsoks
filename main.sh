@@ -5,7 +5,10 @@ function cleanup {
     clear
     echo " "
     echo "До скорой встречи!"
+
+    #rm "$0"
     exit 0
+    
 }
 trap cleanup SIGINT
 
