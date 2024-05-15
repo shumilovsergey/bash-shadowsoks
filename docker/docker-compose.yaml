@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  client:
+    image: easypi/shadowsocks-libev
+    command:
+      ss-local -s ${SERVER_IP}
+               -p ${SERVER_PORT}
+               -m ${ENCRYPTION_METHOD}
+               -k ${PASSWORD}
+               -b 0.0.0.0
+               -l ${LOCAL_PORT}
+               -t 60
+               --fast-open
+    ports:
+      - "${LOCAL_PORT}:${LOCAL_PORT}"
+    restart: unless-stopped
