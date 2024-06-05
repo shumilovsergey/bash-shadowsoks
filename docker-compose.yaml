@@ -1,8 +1,10 @@
-version: "3.8"
+version: "3"
 
 services:
   client:
-    image: easypi/shadowsocks-libev
+    platform: linux/x86_64
+    image: ghcr.io/shumilovsergey/shadowsocks-client:latest
+    container_name: shadowsocks
     command:
       ss-local -s ${SERVER_IP}
                -p ${SERVER_PORT}
@@ -15,3 +17,5 @@ services:
     ports:
       - "${LOCAL_PORT}:${LOCAL_PORT}"
     restart: unless-stopped
+
+
